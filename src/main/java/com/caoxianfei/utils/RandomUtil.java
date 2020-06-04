@@ -35,7 +35,7 @@ public class RandomUtil {
 	*/
 	public static int nextInt(int max) {
 		int value = ThreadLocalRandom.current().nextInt(max + 1);  //随机获取 0 - 输入值 之间的正整数
-		return value; 
+		return value ; 
 	}
 	
 	/**
@@ -77,11 +77,11 @@ public class RandomUtil {
 		int subRandoms[] = new int[subLength];
 
 		for(int i = 0; i < subLength; i++)  {
-			temp1 = Math.abs(nextInt()) % len;
+			temp1 = Math.abs(nextInt()) % len;  
 			subRandoms[i] = array[temp1];
-			temp2 = array[temp1];
+			temp2 = array[temp1]; 
 			array[temp1] = array[len-1];
-			array[len-1] = temp2;
+			array[len-1] = temp2; 
 			len--;
 		}
 		

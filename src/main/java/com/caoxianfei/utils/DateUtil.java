@@ -172,11 +172,11 @@ public final class DateUtil {
 		long timeEnd = (time2 - time)/1000;   // 将  毫秒 转化成秒 缩小 单位
 		if(timeEnd <0) {    // 当 输入的时间  小于  系统时间  说明 评论后 过了 多久时间
 			timeEnd = timeEnd * -1;   //将  负数 进行转换  防止 负数出现  导致 程序错误
-			if(timeEnd < (5*60)) {
-				return "刚刚";            //5分钟以内  显示 刚刚
+			if(timeEnd < (3*60)) {
+				return "刚刚";            //3分钟以内  显示 刚刚
 			}
-			else if(timeEnd < (12 * 300) && timeEnd >= (5*60)) {
-				int num = (int)timeEnd/60;     // 1小时以内  5分钟往后 包括五分钟  显示 多少分钟
+			else if(timeEnd < (12 * 300) && timeEnd >= (3*60)) {
+				int num = (int)timeEnd/60;     // 1小时以内  3分钟往后 包括五分钟  显示 多少分钟
 				return num + "分钟前";
 			}
 			else if (timeEnd < (288 * 300) && timeEnd >=(12 * 300)) {
