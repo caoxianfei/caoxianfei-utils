@@ -24,7 +24,7 @@ public final class NumberUtil {
 	*/
 	public static boolean isNumber(String src) {
 		if(null != src && !"".equals(src.trim()) ) {
-			if(src.matches("^[0-9]*$") == false) {
+			if(src.matches("^[0-9]+*$") == false) {
 				return false;
 			}else {
 				return true;

@@ -16,6 +16,19 @@ import java.util.Date;
  */
 public final class DateUtil {
 
+	
+	
+	
+	
+	
+	public static Date addDays(int days,Date date) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		c.add(Calendar.DATE, days);
+		return c.getTime();
+	}
+	
+	
 	/**
 	* 功能：根据生日计算年龄
 	* 示例：现在是2020-4-23，如果生日是2020-5-20，那结果是19
