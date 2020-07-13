@@ -19,6 +19,31 @@ public final class DateUtil {
 	
 	
 	
+	/**
+	 * 
+	 * @Title: randomDate 
+	 * @Description: 产生一个日期在 minDatem 和maxDate
+	 * @param minDatem
+	 * @param maxDate
+	 * @return
+	 * @return: Date
+	 */
+	public static Date randomDate(Date minDate,Date maxDate) {
+		long t1 = minDate.getTime();//从1970到minDate的毫米值  1
+		long t2 = maxDate.getTime();//从1970到maxDate的毫米值 10
+		double d = Math.random();//产生0 -  1 之间随机小数
+	//	System.out.println(d);
+		 long t3= (long) (( t2 - t1 +1 )*d +t1);
+		 
+		/*
+		 * System.out.println("t1:"+t1); System.out.println("t2:"+t2);
+		 * System.out.println("t3:"+t3);
+		 */
+		return new Date(t3);
+		
+		
+	}	
+	
 	
 	
 	public static Date addDays(int days,Date date) {

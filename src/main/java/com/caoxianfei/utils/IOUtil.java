@@ -29,6 +29,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class IOUtil {
 	
+	
+	
+	
+	
 	/**
 	 * 
 	    * @Title: close
